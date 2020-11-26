@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="script.js"></script> -->
+    <style>
+        .body {
+            margin: 200px;
+        }
+
+        #gambar {
+            width: 900px;
+            margin-left: 23px;
+        }
+
+        .gambar {
+            margin-left: 25px;
+        }
+
+        body {
+            align-content: center;
+            margin: 100px auto;
+            width: 950px;
+            padding: 6px;
+            border: 10px solid black;
+            box-shadow: 6px 6px 10px black;
+            background: cyan;
+        }
+
+        #listgambar {
+            width: 950px;
+            text-align: center;
+            border-bottom: 30px;
+            margin: 20px auto;
+            margin-right: 60px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>Landmark Dunia</h2>
+    <select onchange="gantigambar();" id="listgambar">
+        <option>PILIH Landmark</option>
+        <option value="Foto-foto Landmark/Borobudur.jpg">Landmark Indonesia Candi Borobudur</option>
+        <option value="Foto-foto Landmark/Kabah.jpg">Landmark Mekah, Arab saudi</option>
+        <option value="Foto-foto Landmark/kuala.jpg">Petronas Tower, Kuala lumpur, Malaysia</option>
+        <option value="Foto-foto Landmark/Menara Eiffel.jpg">Menara Eiffel, Paris, Perancis</option>
+        <option value="Foto-foto Landmark/Menara pisa.jpg">Menara Pisa Italia</option>
+        <option value="Foto-foto Landmark/Sydney.jpg">Syedney Opera House, Syedney, Australia</option>
+    </select>
+    <br />
+    <img src="portfolio/alquran.jpeg" alt="" id="gambar">
+</body>
+
+<script type="text/javascript">
+
+    function gantigambar() {
+        let gambar = document.getElementById("listgambar").value;
+        document.getElementById("gambar").src = gambar;
+        alert("Ini Gambar " + gambar);
+    }
+</script>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+    <link rel="stylesheet" type="text/css">
+</head>
+<body>
+    <style>
+        body {
+  background: #99ffff;
+  font-family: sans-serif;
+}
+ 
+h2 {
+  color: #fff;
+}
+ 
+.login {
+  padding: 1em;
+  margin: 2em auto;
+  width: 17em;
+  background: #fff;
+  border-radius: 3px;
+}
+ 
+label {
+  font-size: 10pt;
+  color: #555;
+}
+ 
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 8px;
+  width: 95%;
+  background: #efefef;
+  border: 0;
+  font-size: 10pt;
+  margin: 6px 0px;
+}
+ 
+.tombol {
+  background: #3498db;
+  color: #fff;
+  border: 0;
+  padding: 5px 8px;
+}
+    </style>
+  <center><font color="black" size="6">FORM VALIDATION</font></center>
+    <div class="login">
+        <form action="#" method="POST" onSubmit="validasi()">
+            <div>
+                <label>Nama Lengkap:</label>
+                <input type="text" name="nama" id="nama" />
+            </div>
+            <div>
+                <label>Email:</label>
+                <input type="email" name="email" id="email" />
+            </div>
+            <div>
+                <label>Jam Keberangkatan:</label>
+                <input type="time" required="" placeholder="Jam Keberangkatan" id="jam" name="jam">
+            </div>
+            <div>
+                <label>Tujuan Keberangkatan:</label>
+                <input type="text" name="Tujuan Keberangkatan" id="Tujuan Keberangkatan">
+            </div>
+            <div>
+                <label>Jumlah Tiket:</label>
+                <input type="number" min="1" max="10">
+            </div>
+            <div>
+                <input type="submit" value="submit" class="tombol">
+            </div>
+        </form>
+    </div>
+</body>
+<script type="text/javascript">
+    function validasi() {
+        var nama = document.getElementById("nama").value;
+        var email = document.getElementById("email").value;
+        var alamat = document.getElementById("alamat").value;
+        if (nama != "" && email!="" && alamat !="") {
+            return true;
+        }else{
+            alert('Anda harus mengisi data dengan lengkap !');
+        }
+    }
+</script>
+</html>
